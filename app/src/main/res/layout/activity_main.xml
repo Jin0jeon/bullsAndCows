@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_gravity="center"
+    android:weightSum="20"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="숫자야구"
+        android:textSize="40sp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_background"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textSize="50sp"
+            android:id="@+id/tv1st"/>
+
+        <TextView
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_background"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textSize="50sp"
+            android:id="@+id/tv2nd"/>
+
+        <TextView
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_background"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textSize="50sp"
+            android:id="@+id/tv3rd"/>
+
+        <Button
+            android:id="@+id/btnTry"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Try"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:onClick="onClick"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvCheck"
+        android:text="결과는?"
+        android:textSize="50sp"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <GridView
+        android:background="@drawable/corner"
+        android:id="@+id/gridView"
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/tvRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+    </ScrollView>
+
+</LinearLayout>
